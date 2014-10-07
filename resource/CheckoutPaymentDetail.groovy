@@ -1,5 +1,3 @@
-package resource
-
 import geb.Page;
 
 class CheckoutPaymentDetail extends Page{
@@ -38,11 +36,19 @@ class CheckoutPaymentDetail extends Page{
 		DropdownSelect{$(DropdownSelectXpath)}
 		
 	}
+	
+	/**This method clicks on a specified card type
+	 * @param selectCardXpath
+	 */
 	public void SelectCardType(String selectCardXpath){
 		SelectCardXpath=selectCardXpath
 		SelectCard.click()
 		
 	}
+	/**This method selects a credit card from a credit card drop down
+	 * @param dropdownExpandXpath
+	 * @param dropdownSelectXpath
+	 */
 	public void SelectCardTypeDropDown(String dropdownExpandXpath, String dropdownSelectXpath){
 		DropdownExpandXpath=dropdownExpandXpath
 		DropdownSelectXpath=dropdownSelectXpath
@@ -50,29 +56,54 @@ class CheckoutPaymentDetail extends Page{
 		DropdownSelect.click()
 		
 	}
+	/**This inputs a name in to a text input
+	 * @param nameInputXpath
+	 * @param name
+	 */
 	public void NameOnCardInput(String nameInputXpath, String name){
 		NameInputXpath=nameInputXpath
 		NameInput.value(name)
 	}
+	
+	/**This inputs a card number in to a text input 
+	 * @param cardInputXpath
+	 * @param cardNumber
+	 */
 	public void CardNumberInput(String cardInputXpath, String cardNumber){
 		CardInputXpath=cardInputXpath
 		CardInput.value(cardNumber)
 		
 	}
-	public void CardVerificationInput(String cardVerificationInputXpath, String cardVerificationNumber){
+	/**This inputs a card verification number in to a text input 
+	 * @param cardVerificationInputXpath
+	 * @param cardVerificationNumber
+	 */
+	public void CardVerification(String cardVerificationInputXpath, String cardVerificationNumber){
 		CardVerificationInputXpath=cardVerificationInputXpath
 		CardVerificationInput.value(cardVerificationNumber)
 	}
+	/**This inputs a card expiration date in to a text input
+	 * @param monthInputXpath
+	 * @param yearInputXpath
+	 * @param month
+	 * @param year
+	 */
 	public void ExpirationDateInput(String monthInputXpath, String yearInputXpath, String month, String year){
 		MonthInputXpath=monthInputXpath
 		YearInputXpath=yearInputXpath	
 		MonthInput.value(month)
 		YearInput.value(year)
 	}
+	/**This method selects the delivery address as the billing address
+	 * @param uDAXpath
+	 */
 	public void UseDeliveryAddress(String uDAXpath){
 		UDAXpath=uDAXpath
 		UDA.click()
 	}
+	/**This method s
+	 * @param submitXpath
+	 */
 	public void SubmitPaymentInfo(String submitXpath){
 		SubmitXpath=submitXpath
 		Submit.click()

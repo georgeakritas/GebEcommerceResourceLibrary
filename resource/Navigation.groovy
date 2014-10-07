@@ -36,6 +36,7 @@ class Navigation extends Page{
 	 * @param searchInputXpath
 	 * @param searchButtonXpath
 	 */
+	
 	public void SearchForProduct(String queryString, String searchInputXpath, String searchButtonXpath){
 		SearchInputXpath=searchInputXpath
 		SearchButtonXpath=searchButtonXpath
